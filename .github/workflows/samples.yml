@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        sample: ["https://github.com/slack-samples/deno-hello-world"]
+        sample: ["slack-samples/deno-hello-world"]
 
     steps:
       - uses: actions/checkout@v3
