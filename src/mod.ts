@@ -1,11 +1,11 @@
-export { Manifest, SlackManifest } from "./manifest/mod.ts";
+// export { Manifest, SlackManifest } from "./manifest/mod.ts";
 export type {
   ISlackManifestRemote,
   ISlackManifestRunOnSlack,
   SlackManifestType,
 } from "./manifest/types.ts";
 export type { ManifestSchema } from "./manifest/manifest_schema.ts";
-// export { DefineFunction } from "./functions/mod.ts";
+export { DefineFunction } from "./functions/mod.ts";
 export { SlackFunction } from "./functions/slack-function.ts";
 export {
   BlockActionsRouter,
