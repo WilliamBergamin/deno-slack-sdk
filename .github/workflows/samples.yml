@@ -16,17 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: deno-slack-sdk
+          path: ./deno-slack-sdk
       - uses: actions/checkout@v3
         with:
           repository: ${{ matrix.sample }}
-          path: sample
+          path: ./sample
       - name: Set up sample ${{ matrix.sample }}
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
       - name: Update dependency
-        run: sed -r -i 's/https:\/\/deno\.land\/x\/deno_slack_sdk@[0-9]+\.[0-9]+\.[0-9]+\//\.\/deno-slack-sdk\/src\//p' sample/import_map.json
+        run: sed -r -i 's/https:\/\/deno\.land\/x\/deno_slack_sdk@[0-9]+\.[0-9]+\.[0-9]+\//\.\.\/deno-slack-sdk\/src\//p' sample/import_map.json
       - name: Run tests
         working-directory: ./sample
         run: deno fmt -check
