@@ -1,4 +1,4 @@
-name: Deno
+name: Check samples
 
 on:
   push:
@@ -27,5 +27,5 @@ jobs:
           deno-version: v1.x
 
       - name: Run tests
-        run: ll
+        run: ls
 
