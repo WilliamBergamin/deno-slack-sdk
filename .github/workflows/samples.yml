@@ -32,7 +32,11 @@ jobs:
       - name: Edit sdk dependency to use checkout version
         run: sed -r -i 's/https:\/\/deno\.land\/x\/deno_slack_sdk@[0-9]+\.[0-9]+\.[0-9]+\//\.\.\/deno-slack-sdk\/src\//p' sample/import_map.json
       
+      - name: print ls
+        working-directory: ./sample
+        run: ls
+
       - name: deno check
         working-directory: ./sample
-        run: deno check --all **/*.ts
+        run: deno check --import-map import_map.json -r --all **/*.ts
 
