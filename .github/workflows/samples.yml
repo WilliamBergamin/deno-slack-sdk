@@ -25,7 +25,8 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-
+      - name: Update dependency
+        run: sed -i 's/(https:\/\/deno\.land\/x\/deno_slack_sdk@[0-9]+\.[0-9]+\.[0-9]+\/)/..\/deno-slack-sdk\/src\//' ./sample/import_map.json
       - name: Run tests
-        run: find . -type d
+        run: cat ./sample/import_map.json
 
