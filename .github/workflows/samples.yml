@@ -26,7 +26,7 @@ jobs:
         with:
           deno-version: v1.x
       - name: Update dependency
-        run: sed -r -i 's/https:\/\/deno\.land\/x\/deno_slack_sdk@[0-9]+\.[0-9]+\.[0-9]+\//\.\.\/deno-slack-sdk\/src\//p' sample/import_map.json
+        run: sed -r -i 's/https:\/\/deno\.land\/x\/deno_slack_sdk@[0-9]+\.[0-9]+\.[0-9]+\//\.\/deno-slack-sdk\/src\//p' sample/import_map.json
       - name: Run tests
         working-directory: ./sample
         run: deno fmt -check
