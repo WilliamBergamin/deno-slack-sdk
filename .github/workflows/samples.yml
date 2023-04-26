@@ -27,5 +27,5 @@ jobs:
           deno-version: v1.x
 
       - name: Run tests
-        run: ls
+        run: find . -type d
 
