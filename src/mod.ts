@@ -1,4 +1,4 @@
-// export { Manifest, SlackManifest } from "./manifest/mod.ts";
+export { Manifest, SlackManifest } from "./manifest/mod.ts";
 export type {
   ISlackManifestRemote,
   ISlackManifestRunOnSlack,
