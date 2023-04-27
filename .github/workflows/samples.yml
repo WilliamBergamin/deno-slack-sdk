@@ -42,5 +42,5 @@ jobs:
 
       - name: deno check
         working-directory: ./sample
-        run: deno check -r --all **/*.ts
+        run: deno check -r --all *.ts **/*.ts
 
