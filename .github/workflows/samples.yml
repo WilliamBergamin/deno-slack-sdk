@@ -35,5 +35,5 @@ jobs:
 
       - name: Deno check **/*.ts
         working-directory: ./sample
-        run: find . -type f -regex ".*\.ts" | xargs deno  -r --all check 
+        run: find . -type f -regex ".*\.ts" | xargs deno check -r --all 
 
